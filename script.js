@@ -11,32 +11,32 @@ var pingpong = new Tone.PingPongDelay(0.45, 0.7).connect(pingpong2).toMaster();
 pingpong.wet = 0.5;
 
 var vox1 = new Tone.Player(
-  "https://cdn.glitch.com/564e108b-a4b3-40d5-953c-712d74758782%2Fvox1.mp3?v=1587253603603"
+  "stems/vox1.mp3"
 )
   .connect(pingpong)
   .toMaster();
 var vox2 = new Tone.Player(
-  "https://cdn.glitch.com/564e108b-a4b3-40d5-953c-712d74758782%2Fvox2.mp3?v=1587253601960"
+  "stems/vox2.mp3"
 )
   .connect(pingpong)
   .toMaster();
 var tron = new Tone.Player(
-  "https://cdn.glitch.com/564e108b-a4b3-40d5-953c-712d74758782%2Ftron.mp3?v=1587253603279"
+  "stems/tron.mp3"
 )
   .connect(pingpong)
   .toMaster();
 var wurli = new Tone.Player(
-  "https://cdn.glitch.com/564e108b-a4b3-40d5-953c-712d74758782%2Fwurli.mp3?v=1587253606032"
+  "stems/wurli.mp3"
 )
   .connect(pingpong)
   .toMaster();
 var slide = new Tone.Player(
-  "https://cdn.glitch.com/564e108b-a4b3-40d5-953c-712d74758782%2Fslide.mp3?v=1587253601695"
+  "stems/slide.mp3"
 )
   .connect(pingpong)
   .toMaster();
 var delay = new Tone.Player(
-  "https://cdn.glitch.com/564e108b-a4b3-40d5-953c-712d74758782%2Fdelay.mp3?v=1587253602452"
+  "stems/delay.mp3"
 )
   .connect(pingpong)
   .toMaster();
