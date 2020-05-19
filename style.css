@@ -1,0 +1,300 @@
+body {
+  background-color: #d4d4d4;
+  paddinng: 0;
+  height: 100%;
+}
+
+h1 {
+  font-size: 60px;
+  text-shadow: 2px 2px 10px #aaa;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#headwrapper {
+  font-size: 60px;
+  text-shadow: 2px 2px 10px #aaa;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: "Beth Ellen", cursive;
+  transition: color 1s linear, background-image 2s linear;
+  color: black;
+}
+
+#headwrapper:hover {
+  color: white;
+}
+
+#click-sound {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  transition: color 0.3s linear, font-size 0.3s linear, transform 0.3s linear;
+}
+
+#click-sound:hover {
+  color: white;
+  font-size: 0.9em;
+  transform: rotate(10deg);
+}
+
+.canvas {
+}
+
+#lenkie {
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  text-align: center;
+  width: 4em;
+  /*   height: 1.5em; */
+  opacity: 0.8;
+  position: relative;
+  animation-name: moving;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+
+#lenkie a {
+  transition: color 0.3s linear;
+}
+
+#lenkie:hover a {
+  color: black;
+}
+
+@keyframes moving {
+  0% {
+    background-color: gray;
+    left: 0px;
+    top: 200px;
+  }
+  25% {
+    background-color: skyblue;
+    left: 100px;
+    top: 200px;
+  }
+  50% {
+    background-color: slategray;
+    left: 100px;
+    top: 200px;
+  }
+  75% {
+    background-color: skyblue;
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    background-color: gray;
+    left: 0px;
+    top: 200px;
+  }
+}
+
+#cherry {
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  text-align: center;
+  width: 7em;
+  opacity: 0.8;
+  position: relative;
+  animation-name: moving2;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  z-index: 1;
+
+}
+
+cherry:a {
+  transition: color 0.3s linear;
+}
+
+#cherry:hover a {
+  color: black;
+}
+
+@keyframes moving2 {
+  0% {
+    background-color: skyblue;
+    left: 100px;
+    top: 220px;
+  }
+  25% {
+    background-color: gray;
+    left: 0px;
+    top: 220px;
+  }
+  50% {
+    background-color: skyblue;
+    left: 100px;
+    top: 220px;
+  }
+  75% {
+    background-color: gray;
+    left: 0px;
+    top: 220px;
+  }
+  100% {
+    background-color: skyblue;
+    left: 100px;
+    top: 220px;
+  }
+}
+
+#email {
+  transform: rotate(90deg);
+  font-family: "Beth Ellen", cursive;
+  background-color: black;
+  width: auto;
+  height: auto;
+  position: fixed;
+  padding: 0 1em 0.5em 1em;
+  margin: 20px;
+  float: right;
+  opacity: 0.5;
+  transition: background-color 0.3s linear;
+  animation-name: moving3;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moving3 {
+  0% {
+    right: -95px;
+    bottom: 200px;
+  }
+  25% {
+    right: -95px;
+    bottom: 400px;
+  }
+  50% {
+    right: -95px;
+    bottom: 200px;
+  }
+  75% {
+    right: -95px;
+    bottom: 400px;
+  }
+  100% {
+    right: -95px;
+    bottom: 200px;
+  }
+}
+
+#email a {
+  transition: color 0.3s linear;
+}
+
+#email:hover {
+  background-color: white;
+}
+
+#email:hover a {
+  color: black;
+}
+
+#pics {
+  display: flex;
+  flex-flow: space-evenly;
+  align-items: flex-end;
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+}
+
+#tornado {
+  float: left;
+  bottom: 0;
+  allign: bottom;
+  transition: filter 0.15s linear;
+  max-height: 100px;
+  width: auto;
+  z-index: -1;
+}
+
+#tornado:hover {
+  filter: invert(100%);
+}
+
+#skeleton {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  float: right;
+  max-height: 300px;
+  width: auto;
+  transition: filter 0.15s linear;
+  z-index: -1;
+}
+
+#skeleton:hover {
+  filter: invert(100%);
+}
+
+#footer {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  opacity: 0.2;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+    /*     background-color: black; */
+  }
+
+  h1 {
+    font-size: 40px;
+    text-shadow: 2px 2px 10px #aaa;
+  }
+
+  #skeleton {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+    float: right;
+    max-height: 200px;
+    width: auto;
+    transition: filter 0.15s linear;
+    order: 1;
+  }
+}
+
+@media only screen and (max-height: 650px) {
+  body {
+    /*     background-color: black; */
+  }
+
+@keyframes moving3 {
+  0% {
+    right: -95px;
+    bottom: 100px;
+  }
+  25% {
+    right: -95px;
+    bottom: 300px;
+  }
+  50% {
+    right: -95px;
+    bottom: 100px;
+  }
+  75% {
+    right: -95px;
+    bottom: 300px;
+  }
+  100% {
+    right: -95px;
+    bottom: 100px;
+  }
+}
+}
