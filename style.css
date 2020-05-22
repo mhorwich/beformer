@@ -9,6 +9,12 @@ body {
 h1 {
   font-size: 60px;
   text-shadow: 2px 2px 10px #aaa;
+  margin-bottom: 0 !important;
+}
+
+header{
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -19,7 +25,6 @@ a {
 #headwrapper {
   font-size: 60px;
   text-shadow: 2px 2px 10px #aaa;
-  margin: 0;
   padding: 0;
   text-align: center;
   font-family: "Beth Ellen", cursive;
@@ -34,8 +39,13 @@ a {
 #click-sound {
   font-family: "Open Sans", sans-serif;
   text-align: center;
+  margin-top: 0 !important;
   z-index: 1;
   transition: color 0.3s linear, font-size 0.3s linear, transform 0.3s linear;
+}
+
+#click-sound p{
+    margin-top: 0;
 }
 
 #click-sound:hover {
