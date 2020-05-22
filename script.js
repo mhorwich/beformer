@@ -54,11 +54,7 @@ delay.loop = true;
 function setup() {
   let canvas = createCanvas(150, 150);
   
-  
-  canvas.position(windowWidth/2-75, windowHeight/3.5);
-  
-  canvas.class("canvas");
-
+  canvas.parent("clock");
   
   stroke(255);
 
