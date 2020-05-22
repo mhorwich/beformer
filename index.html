@@ -14,7 +14,7 @@
       rel="stylesheet"
     />
     <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
@@ -23,8 +23,7 @@
       type="text/javascript"
     ></script>
 
-    <!-- import the webpage's javascript file -->
-    <script src="script.js" defer></script>
+    <script src="/script.js" defer></script>
   </head>
 
   <body>
@@ -40,6 +39,8 @@
           <i>click anywhere to play sound</i>
         </p>
       </div>
+
+      <div id="clock"></div>
 
       <div id="lenkie">
         <p>
@@ -76,12 +77,12 @@
       </div>
     </div>
 
-    <div id="footer">
+    <div id="foot-wrapper">
       <footer>
-<!--         <marquee> -->
-          © 2020 Beformer
-<!--         </marquee> -->
-      </footer>
+        <marquee scrollamount="2">
+        © 2020 Beformer
+        </marquee>
+              </footer>
     </div>
   </body>
 </html>
