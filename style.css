@@ -41,16 +41,18 @@ a {
   text-align: center;
   margin-top: 0 !important;
   z-index: 1;
-  transition: color 0.3s linear, font-size 0.3s linear, transform 0.3s linear;
+  transition: color 0.3s linear, font-size 0.3s linear, transform 0.3s linear, margin-bottom 0.3s linear;
 }
 
 #click-sound p{
     margin-top: 0;
 }
 
+
 #click-sound:hover {
   color: white;
   font-size: 0.9em;
+  margin-bottom: 0.1em;
   transform: rotate(1deg);
 }
 
@@ -279,7 +281,7 @@ cherry:a {
     transition: filter 0.15s linear;
     order: 1;
   }
-  
+
   #skeleton:hover {
   filter: invert(100%);
 }
@@ -358,7 +360,7 @@ cherry:a {
     bottom: 75px;
   }
 }
-  
+
     #skeleton {
     position: fixed;
     bottom: 0;
@@ -370,8 +372,8 @@ cherry:a {
     transition: filter 0.15s linear;
     order: 1;
   }
-  
+
   #skeleton:hover {
   filter: invert(100%);
-}  
+}
 }
