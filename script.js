@@ -143,7 +143,7 @@ function mousePressed() {
     delay.start();
     started = true;
     Tone.Master.mute = false;
-    x.innerHTML = "click anywhere to stop sound";
+    x.innerHTML = "<i>click anywhere to stop sound</i>";
 
   } else {
     vox1.stop();
@@ -154,7 +154,7 @@ function mousePressed() {
     delay.stop();
     started = false;
     Tone.Master.mute = true;
-    x.innerHTML = "click anywhere to play sound";
+    x.innerHTML = "<i>click anywhere to play sound</i>";
 
   }
 }
