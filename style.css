@@ -6,20 +6,48 @@ body {
   height: 100%;
 }
 
+/*Ripple*/
+.ripple {
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  transform: scale(0);
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  position: fixed;
+}
+
+/*Animate Function*/
+.animate {
+  animation: ripple-mo 2s cubic-bezier(0, 0, 0.2, 1);
+}
+@keyframes ripple-mo {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(10);
+    opacity: 0;
+  }
+}
+
+
+
 h1 {
   font-size: 60px;
   text-shadow: 2px 2px 10px #aaa;
-  margin-bottom: 0 !important;
-}
-
-header{
-  margin: 0;
-  padding: 0;
+  margin-bottom: 0;
 }
 
 a {
   text-decoration: none;
   color: white;
+  transition: color 0.3s linear;
+}
+
+a:hover {
+  color: black;
 }
 
 #headwrapper {
@@ -28,132 +56,127 @@ a {
   padding: 0;
   text-align: center;
   font-family: "Beth Ellen", cursive;
-  transition: color 1s linear, background-image 2s linear;
+  transition: color 4s linear, letter-spacing 4s linear;
   color: black;
 }
 
 #headwrapper:hover {
   color: white;
+  letter-spacing: 20px;
 }
 
 #click-sound {
-  font-family: "Open Sans", sans-serif;
+/*   font-family: "Beth Ellen", cursive; */
+    font-family: "Rationale", sans-serif;
+  font-style: italic;
+/*   font-weight: 100; */
   text-align: center;
   margin-top: 0;
   z-index: 1;
-  transition: color 0.3s linear, font-size 0.3s linear, transform 0.3s linear, padding 0.3s linear;
+  transition: color 4s linear, letter-spacing 4s linear;
 }
 
-#click-sound p{
-    margin-top: 0;
+#click-sound p {
+  margin-top: 0;
 }
 
 #click-sound:hover {
   color: white;
-  font-size: 0.9em;
-  transform: rotate(1deg);
-  padding: 0.15em;
+  letter-spacing: 8px;
 }
 
 #clock {
   text-align: center;
   padding: 10em, 10em;
-  z-index: -1;
   top-margin: 2em;
   bottom-margin: 0;
 }
 
-#lenkie {
-  font-family: "Open Sans", sans-serif;
-  font-size: 24px;
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.left{
+  flex: 30%;
+}
+
+.middle{
+  flex: 35%;
+}
+
+.right{
+  flex: 30%;
+}
+
+.artist {
+  width: auto;
+  font-family: "Rationale", sans-serif;
+  font-weight: 100;
+  font-size: 30px;
   text-align: center;
   top-margin: 0;
   bottom-margin: 0;
-  width: 4em;
+  left-padding: 0;
   opacity: 0.8;
   position: relative;
   z-index: 1;
-  animation-name: moving;
+
+}
+ 
+#lenkie {
+  width: 3em;
+  animation-name: lenkie;
   animation-duration: 8s;
   animation-iteration-count: infinite;
-}
-
-#lenkie a {
-  transition: color 0.3s linear;
-}
-
-#lenkie:hover a {
-  color: black;
-}
-
-@keyframes moving {
-  0% {
-    background-color: gray;
-    left: 0px;
-  }
-  25% {
-    background-color: skyblue;
-    left: 100px;
-  }
-  50% {
-    background-color: slategray;
-    left: 100px;
-  }
-  75% {
-    background-color: skyblue;
-    left: 0px;
-  }
-  100% {
-    background-color: gray;
-    left: 0px;
-  }
 }
 
 #cherry {
-  font-family: "Open Sans", sans-serif;
-  font-size: 24px;
-  text-align: center;
-  top-margin: 0;
-  bottom-margin: 0;
-  width: 7em;
-  opacity: 0.8;
-  position: relative;
-  animation-name: moving2;
+  width: 5.5em;
+  animation-name: cherry;
   animation-duration: 8s;
   animation-iteration-count: infinite;
+}
+
+.releases {
+  width: 75%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  float: center;
+  font-family: "Rationale", sans-serif;
+  font-weight: 300;
+  padding: 1em;
+  text-align: center;
+  border: 1px solid white;
+  background: #d4d4d4;
+  overflow: auto;
+  opacity: 50%;
   z-index: 1;
-
+  transition: opacity 0.3s linear;
+  animation-name: boxes;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
 }
 
-cherry:a {
-  transition: color 0.3s linear;
+.releases:hover {
+  opacity: 90%;
 }
 
-#cherry:hover a {
-  color: black;
+.releases h2 {
+  font-family: "Beth Ellen", cursive;
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 0;
+  margin-top: 0;
 }
 
-@keyframes moving2 {
-  0% {
-    background-color: skyblue;
-    left: 100px;
-  }
-  25% {
-    background-color: gray;
-    left: 0px;
-  }
-  50% {
-    background-color: skyblue;
-    left: 100px;
-  }
-  75% {
-    background-color: gray;
-    left: 0px;
-  }
-  100% {
-    background-color: skyblue;
-    left: 100px;
-  }
+.releases p {
+  font-size: 24px;
 }
 
 #email {
@@ -163,50 +186,20 @@ cherry:a {
   width: auto;
   height: auto;
   position: fixed;
-  padding: 0 1em 0.1em 1em;
-  margin: 10px;
+/*   padding: 0 1em 0.1em 1em; */
+  padding-left: .5em;
+  padding-right: .5em;  
+/*   margin: 10px; */
   float: right;
   opacity: 0.5;
-  z-index: 1;
   transition: background-color 0.3s linear;
-  animation-name: moving3;
+  animation-name: email;
   animation-duration: 8s;
   animation-iteration-count: infinite;
 }
 
-@keyframes moving3 {
-  0% {
-    right: -95px;
-    bottom: 200px;
-  }
-  25% {
-    right: -95px;
-    bottom: 400px;
-  }
-  50% {
-    right: -95px;
-    bottom: 200px;
-  }
-  75% {
-    right: -95px;
-    bottom: 400px;
-  }
-  100% {
-    right: -95px;
-    bottom: 200px;
-  }
-}
-
-#email a {
-  transition: color 0.3s linear;
-}
-
 #email:hover {
   background-color: white;
-}
-
-#email:hover a {
-  color: black;
 }
 
 #pics {
@@ -216,6 +209,7 @@ cherry:a {
   position: fixed;
   bottom: 10px;
   width: 100%;
+  z-index: -1;
 }
 
 #tornado {
@@ -226,11 +220,7 @@ cherry:a {
   transition: filter 0.15s linear;
   max-height: 100px;
   width: auto;
-  z-index: -1;
-}
-
-#tornado:hover {
-  filter: invert(100%);
+  z-index: -2;
 }
 
 #skeleton {
@@ -243,17 +233,13 @@ cherry:a {
   max-height: 300px;
   width: auto;
   transition: filter 0.15s linear;
-  z-index: -1;
-}
-
-#skeleton:hover {
-  filter: invert(100%);
+  z-index: -1 !important;
 }
 
 #foot-wrapper {
   font-family: "Open Sans", sans-serif;
   font-size: 12px;
-  position: fixed;
+  /*   position: fixed; */
   left: 0;
   bottom: -3px;
   width: 100%;
@@ -261,9 +247,147 @@ cherry:a {
   text-align: center;
 }
 
+/* ----------------animations -----------------*/
+
+@keyframes background {
+  0% {
+    background-color: lightblue;
+  }
+  25% {
+    background-color: skyblue;
+  }
+  50% {
+    background-color: lightskyblue;
+  }
+  75% {
+    background-color: skyblue;
+  }
+  100% {
+    background-color: lightblue;
+  }
+}
+
+@keyframes lenkie {
+  0% {
+    background-color: gray;
+    left: 0;
+  }
+  25% {
+    background-color: skyblue;
+    left: 50%;
+  }
+  50% {
+    background-color: slategray;
+    left: 50%;
+  }
+  75% {
+    background-color: skyblue;
+    left: 0;
+  }
+  100% {
+    background-color: gray;
+    left: 0;
+  }
+}
+
+@keyframes cherry {
+  0% {
+    background-color: skyblue;
+    left: 50%;
+  }
+  25% {
+    background-color: gray;
+    left: 0;
+  }
+  50% {
+    background-color: skyblue;
+    left: 50%;
+  }
+  75% {
+    background-color: gray;
+    left: 0;
+  }
+  100% {
+    background-color: skyblue;
+    left: 50%;
+  }
+}
+
+@keyframes boxes {
+  0% {
+    background-color: skyblue;
+  }
+  25% {
+    background-color: deepskyblue;
+  }
+  50% {
+    background-color: skyblue;
+  }
+  75% {
+    background-color: deepskyblue;
+  }
+  100% {
+    background-color: skyblue;
+  }
+}
+
+@keyframes email {
+  0% {
+    right: -75px;
+    bottom: 20%;
+  }
+  50% {
+    right: -75px;
+    bottom: 40%;
+  }
+  100% {
+    right: -75px;
+    bottom: 20%;
+  }
+}
+
+
+/* -----------  MAX SCREEN WIDTH 1100 PX ---------------- */
+@media only screen and (max-width: 1100px) {
+
+  @keyframes cherry {
+  0% {
+    background-color: skyblue;
+    left: 25%;
+  }
+  25% {
+    background-color: gray;
+    left: 0;
+  }
+  50% {
+    background-color: skyblue;
+    left: 25%;
+  }
+  75% {
+    background-color: gray;
+    left: 0;
+  }
+  100% {
+    background-color: skyblue;
+    left: 25%;
+  }
+}
+
+  
+}
+
+
+/* -----------  MAX SCREEN WIDTH 700 PX ---------------- */
+@media only screen and (max-width: 700px) {
+ 
+  .flex-container{
+    flex-direction: column;
+  }
+  
+}
+
 /* -----------  MAX SCREEN WIDTH 520 PX ---------------- */
 @media only screen and (max-width: 520px) {
-
   h1 {
     font-size: 40px;
     text-shadow: 2px 2px 10px #aaa;
@@ -280,87 +404,36 @@ cherry:a {
     transition: filter 0.15s linear;
     order: 1;
   }
+  
+  #email{
+    transform:rotate(0);
+    margin-top: 30px;
+    padding-top: 0px;
+    position: relative;
+    animation-duration: 4s;
 
-  #skeleton:hover {
-  filter: invert(100%);
-}
-
-
-@keyframes moving {
-  0% {
-    background-color: gray;
-    left: 0;
   }
-  25% {
-    background-color: skyblue;
-    left: 75px;
+  
+  @keyframes email {
+  0% {
+    right: 0;
+    bottom: -5px;
   }
   50% {
-    background-color: slategray;
-    left: 75px;
-  }
-  75% {
-    background-color: skyblue;
-    left: 0;
+    right: 25%;
+    bottom: -5px;
   }
   100% {
-    background-color: gray;
-    left: 0;
+    right: -0;
+    bottom: -5px;
   }
+
+
 }
-
-  @keyframes moving2 {
-  0% {
-    background-color: skyblue;
-    left: 75px;
-  }
-  25% {
-    background-color: gray;
-    left: 0;
-  }
-  50% {
-    background-color: skyblue;
-    left: 75px;
-  }
-  75% {
-    background-color: gray;
-    left: 0;
-  }
-  100% {
-    background-color: skyblue;
-    left: 75px;
-  }
-}
-
-
 
 /* -----------  MAX SCREEN HEIGHT 650 PX ---------------- */
 @media only screen and (max-height: 650px) {
-
-  @keyframes moving3 {
-  0% {
-    right: -95px;
-    bottom: 75px;
-  }
-  25% {
-    right: -95px;
-    bottom: 150px;
-  }
-  50% {
-    right: -95px;
-    bottom: 75px;
-  }
-  75% {
-    right: -95px;
-    bottom: 150px;
-  }
-  100% {
-    right: -95px;
-    bottom: 75px;
-  }
-}
-
-    #skeleton {
+  #skeleton {
     position: fixed;
     bottom: 0;
     right: 0;
@@ -371,8 +444,4 @@ cherry:a {
     transition: filter 0.15s linear;
     order: 1;
   }
-
-  #skeleton:hover {
-  filter: invert(100%);
-}
 }
