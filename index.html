@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
+
     <meta property="og:image" content="img/guyWide.jpg" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="beformer.co" />
@@ -19,14 +19,14 @@
       type="image/png"
       href="img/beformerClock.png"/>
 
-
     <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300|Beth+Ellen&display=swap"
+      href="https://fonts.googleapis.com/css?family=Rationale|Beth+Ellen&display=swap"
       rel="stylesheet"
     />
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css" />
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
     <script
@@ -38,6 +38,9 @@
   </head>
 
   <body>
+    
+    <div class="ripple"></div>
+    
     <div id="headwrapper">
       <header>
         <h1>BEFORMER</h1>
@@ -47,28 +50,56 @@
     <div id="main">
       <div id="click-sound">
         <p>
-          <i>click anywhere to play sound</i>
+          click anywhere to play sound
         </p>
       </div>
 
       <div id="clock"></div>
 
-      <div id="lenkie">
-        <p>
-          <a href="https://linktr.ee/Lenkie.music">Lenkie</a>
-        </p>
-      </div>
+      <div class="flex-container">
+        <div class="left">
+          <div class="artist" id="lenkie">
+            <p>
+              <a href="https://linktr.ee/Lenkie.music" target="_blank">Lenkie</a>
+            </p>
+          </div>
+          <div class="artist" id="cherry">
+            <p>
+              <a href="http://cherryjungle.com/" target="_blank">Cherry Jungle</a>
+            </p>
+          </div>
+        </div>
 
-      <div id="cherry">
-        <p>
-          <a href="http://cherryjungle.com/">Cherry Jungle</a>
-        </p>
-      </div>
+        <div class="middle">
+          <div class="releases" id="upcoming">
+            <h2>Upcoming</h2>
+            <p>
+              Cherry Jungle
+              <a href="https://show.co/social-unlock/6bzCNuCRMRUaxxgX5ZLi2v" target="_blank"
+                ><i>Mouthful of Cavities</i></a
+              >
+              (8.14.20)
+            </p>
+          </div>
 
-      <div id="email">
-        <p>
-          <a href="mailto:beformer.co@gmail.com">Beformer.co@gmail.com</a>
-        </p>
+          <div class="releases" id="recent">
+            <h2>Recent</h2>
+            <p>
+              Lenkie
+              <a href="https://songwhip.com/lenkie/trouble" target="_blank">
+                <i>Trouble</i>
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div class="right">
+          <div id="email">
+              <a href="mailto:beformer.co@gmail.com">
+                Beformer.co@gmail.com
+              </a>
+          </div>
+        </div>
       </div>
 
       <div id="pics">
@@ -88,12 +119,6 @@
       </div>
     </div>
 
-    <div id="foot-wrapper">
-      <footer>
-        <marquee scrollamount="2">
-        © 2020 Beformer
-        </marquee>
-              </footer>
     </div>
   </body>
 </html>
