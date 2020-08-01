@@ -124,9 +124,15 @@ a:hover {
   opacity: 0.8;
   position: relative;
   z-index: 1;
-
 }
  
+#scoobert {
+  width: 7em;
+  animation-name: scoobert;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+
 #lenkie {
   width: 3em;
   animation-name: lenkie;
@@ -249,21 +255,26 @@ a:hover {
 
 /* ----------------animations -----------------*/
 
-@keyframes background {
+@keyframes scoobert {
   0% {
-    background-color: lightblue;
+    background-color: gray;
+    left: 50%;
   }
   25% {
     background-color: skyblue;
+    left: 50%;
   }
   50% {
-    background-color: lightskyblue;
+    background-color: gray;
+    left: 0;
   }
   75% {
     background-color: skyblue;
+    left: 0;
   }
   100% {
-    background-color: lightblue;
+    background-color: gray;
+    left: 50%;
   }
 }
 
@@ -350,6 +361,29 @@ a:hover {
 /* -----------  MAX SCREEN WIDTH 1100 PX ---------------- */
 @media only screen and (max-width: 1100px) {
 
+    @keyframes scoobert {
+  0% {
+    background-color: gray;
+    left: 25%;
+  }
+  25% {
+    background-color: skyblue;
+    left: 25%;
+  }
+  50% {
+    background-color: gray;
+    left: 0;
+  }
+  75% {
+    background-color: skyblue;
+    left: 0;
+  }
+  100% {
+    background-color: gray;
+    left: 25%;
+  }
+}
+  
   @keyframes cherry {
   0% {
     background-color: skyblue;
