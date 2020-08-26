@@ -1,0 +1,283 @@
+body {
+  background-color: #d4d4d4;
+  background-image: url("https://cdn.glitch.com/32304e11-aabb-4e2c-ab8c-89b80ac2f69f%2FScoobert%20Photo%203.jpg?v=1597737340560");
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: lightblue;
+}
+
+h3 {
+  color: white;
+  font-family: "Staatliches", cursive;
+  font-size: 36px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+#headwrapper {
+  text-align: center;
+  font-size: 48px;
+  text-shadow: 2px 2px 10px #aaa;
+  font-family: "Staatliches", cursive;
+  transition: color 1s linear, background-image 2s linear;
+  color: black;
+  margin: 0;
+}
+
+#headwrapper h1 {
+  margin: 0;
+  color: lightblue;
+}
+
+#headwrapper h2 {
+  margin: 0;
+  font-size: 30px;
+  text-shadow: 2px 2px 10px #aaa;
+  font-family: "Staatliches", cursive;
+  transition: color 1s linear, background-image 2s linear;
+  color: pink;
+}
+
+.pic {
+  width: 12%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 0;
+  transition: transform 0.05s linear;
+  animation-name: dance;
+  animation-duration: 0.9524s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes dance {
+  0% {
+    transform: rotateZ(45deg);
+  }
+  50% {
+    transform: rotateZ(-45deg);
+  }
+  100% {
+    transform: rotateZ(45deg);
+  }
+}
+
+.pic:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  transform: rotateZ(10deg);
+}
+
+#instructions {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+#instructions h3 {
+  font-size: 30px;
+  color: white;
+  text-shadow: 2px 2px 10px #aaa;
+  font-family: "Staatliches", cursive;
+  text-align: center;
+  cursor: pointer;
+  background-color: rgba(127, 127, 255, 0.75);
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  animation-name: flash;
+  animation-duration: 0.9524s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes flash {
+  0% {
+    color: white;
+  }
+  25% {
+    color: pink;
+  }
+  50% {
+    color: lightblue;
+  }
+  75% {
+    color: pink;
+  }
+  100% {
+    color: white;
+  }
+}
+
+#instructions h3:hover {
+  /*   animation-play-state: paused; */
+  color: pink;
+  background-color: rgba(127, 127, 255, 0.95);
+}
+
+#cover {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border-radius: 5px;
+}
+
+#cover:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.7);
+  transform: rotateZ(2deg);
+}
+
+.track-description {
+  font-family: "Staatliches", cursive;
+  color: white;
+  background-color: rgba(255, 127, 127, 0.7);
+  width: 50%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  padding: 5px 20px;
+  border-radius: 10px;
+}
+
+.track-description p {
+  font-size: 18px;
+}
+
+.bio {
+  background-color: rgba(255, 0, 0, 0.7);
+  text-align: center;
+  font-family: "Staatliches", cursive;
+  color: white;
+  width: 75%;
+  /*   margin-top: 10px; */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2px 30px;
+  border-radius: 20px;
+}
+
+.bio h3 {
+  font-size: 36px;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+.bio p {
+  font-size: 18px;
+}
+
+#beformer {
+  font-family: "Beth Ellen", cursive;
+  background-color: black;
+  font-size: 14px;
+  /*   width: 4em; */
+  height: 2.5em;
+  text-align: center;
+  position: fixed;
+  padding: 0 1em 1em 1em;
+  top: 10px;
+  right: -20px;
+  opacity: 0.7;
+  border-radius: 40px;
+  transform: rotateZ(40deg);
+  transition: background-color 0.1s linear;
+}
+
+#beformer a {
+  transition: color 0.1s linear;
+}
+
+#beformer:hover {
+  background-color: white;
+}
+
+#beformer:hover a {
+  color: black;
+}
+
+#press {
+  font-family: "Staatliches", cursive;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 2px 20px;
+  border-radius: 20px;
+  margin-top: 10px;
+  width: 75%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#press h3 {
+  text-align: center;
+  font-size: 36px;
+  margin: 0;
+}
+
+#press a {
+  color: lightblue;
+}
+
+#press a:hover {
+  color: pink;
+}
+
+#pics {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-align: baseline;
+}
+
+@media only screen and (max-width: 750px) {
+  #cover {
+    width: 80%;
+  }
+
+  .track-description {
+    width: 80%;
+  }
+
+  #instructions {
+    width: 70%;
+  }
+}
+
+/* Safari 11+ */
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+    #pics {
+      align-items: flex-start;
+    }
+  }
+}
+
+/* Safari 10.1 */
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) and (not (stroke-color: transparent)) {
+    #pics {
+      align-items: flex-start;
+    }
+  }
+}
+
+/* Safari 6.1-10.0 (not 10.1) */
+@media screen and (min-color-index: 0) and(-webkit-min-device-pixel-ratio:0) {
+  @media {
+    #pics {
+      align-items: flex-start;
+    }
+  }
+}
