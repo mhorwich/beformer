@@ -109,6 +109,14 @@ h3 {
   cursor: pointer;
 }
 
+.speeds{
+  font-family: "Staatliches", cursive;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
 #instructions {
   width: 40%;
   margin-left: auto;
@@ -127,8 +135,29 @@ h3 {
   border-radius: 10px;
   margin-left: auto;
   margin-right: auto;
-  /*   width: 75%; */
+  animation-name: flash;
+  animation-duration: 0.9524s;
+  animation-iteration-count: infinite;
 }
+
+@keyframes flash {
+  0% {
+    color: white;
+  }
+  25% {
+    color: pink;
+  }
+  50% {
+    color: lightblue;
+  }
+  75% {
+    color: pink;
+  }
+  100% {
+    color: white;
+  }
+}
+
 
 #instructions h3:hover {
   color: pink;
