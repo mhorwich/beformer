@@ -26,6 +26,15 @@ var drums = new Tone.Player(
   // .connect(pingpong)
   .toMaster();
 
+var slider = document.getElementById("myRange");
+
+slider.oninput = function() {
+vox.playbackRate = slider.value/50;
+synth.playbackRate = slider.value/50;
+eGuitar.playbackRate = slider.value/50;
+bass.playbackRate = slider.value/50;
+drums.playbackRate = slider.value/50;
+}
 
 var started = false;
 var voxPlaying = false;
