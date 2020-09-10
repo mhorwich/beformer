@@ -95,6 +95,12 @@ function hitIt() {
     bass.mute = false;
     eGuitar.mute = false;
     drums.mute = false;
+    vox.playbackRate = 1;
+    synth.playbackRate = 1;
+    eGuitar.playbackRate = 1;
+    bass.playbackRate = 1;
+    drums.playbackRate = 1;
+
   }
 }
 
