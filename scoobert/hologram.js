@@ -95,6 +95,7 @@ function hitIt() {
     bass.mute = false;
     eGuitar.mute = false;
     drums.mute = false;
+    slider.value = 50;
     vox.playbackRate = 1;
     synth.playbackRate = 1;
     eGuitar.playbackRate = 1;
