@@ -48,6 +48,12 @@
     </div>
 
     <div id="main">
+      <div id="tag-line">
+        <p>
+          a eureka nucleus in retrograde
+        </p>
+      </div>
+      
       <div id="click-sound">
         <p>
           click anywhere to play sound
@@ -147,6 +153,24 @@
           </a>
         </p>
       </div>
-    
+    <svg>
+      <filter id="turbulence" x="0" y="0" width="100%" height="100%">
+        <feTurbulence
+          id="sea-filter"
+          numOctaves="1"
+          seed="2"
+          baseFrequency="0.001"
+        ></feTurbulence>
+        <feDisplacementMap scale="6" in="SourceGraphic"></feDisplacementMap>
+      </filter>
+      <animate
+        xlink:href="#sea-filter"
+        attributeName="baseFrequency"
+        dur="30s"
+        keyTimes="0;0.5;1"
+        values="0.02 0.04;0.04 0.06;0.02 0.06"
+        repeatCount="indefinite"
+      />
+    </svg>    
   </body>
 </html>
