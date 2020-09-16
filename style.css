@@ -65,6 +65,18 @@ a:hover {
   letter-spacing: 20px;
 }
 
+#tag-line{
+      font-family: "Rationale", sans-serif;
+      font-size: 36px;
+      text-align: center;
+      filter: url("#turbulence");
+}
+
+#tag-line p{
+  margin-top: 0;
+/*   margin-bottom: 0; */
+}
+
 #click-sound {
 /*   font-family: "Beth Ellen", cursive; */
     font-family: "Rationale", sans-serif;
