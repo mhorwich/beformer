@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<!-- WEBSITE BY MAX HORWICH, MAXHORWICH.COM -->
+
+<html lang="en">
+  <head>
+    <title>Hologram</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn.glitch.com/fa770d9b-0f41-4e55-aa29-f5fc8e509e3e%2FIMG_3110.jpeg?v=1599512595517"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Beth+Ellen|Staatliches&display=swap"
+      rel="stylesheet"
+    />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/scoobert/hologram.css" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.0.1/Tone.min.js"
+      type="text/javascript"
+    ></script>
+
+    <!-- import the webpage's javascript file -->
+    <script src="/scoobert/hologram.js" defer></script>
+  </head>
+
+  <body>
+    <div id="headwrapper">
+      <header>
+        <h1>Take a Breath</h1>
+        <h2>
+          a new single from
+          <a href="https://soundcloud.com/mrscoobertdoobert" target="_blank"
+            >scoobert doobert</a
+          >
+          10/6/2020
+        </h2>
+      </header>
+    </div>
+
+    <div id="pics">
+      <img
+        class="pic"
+        id="mic"
+        src="https://cdn.glitch.com/32304e11-aabb-4e2c-ab8c-89b80ac2f69f%2Fmic.jpg?v=1597732592335"
+        onclick="playVox()"
+      />
+      <img
+        class="pic"
+        id="synth"
+        src="https://cdn.glitch.com/32304e11-aabb-4e2c-ab8c-89b80ac2f69f%2Fsynth.jpg?v=1597732599526"
+        onclick="playSynth()"
+      />
+      <img
+        class="pic"
+        id="eGuitar"
+        src="https://cdn.glitch.com/32304e11-aabb-4e2c-ab8c-89b80ac2f69f%2FEguitar.jpg?v=1597732604300"
+        onclick="playEGuitar()"
+      />
+      <img
+        class="pic"
+        id="bass"
+        src="https://cdn.glitch.com/32304e11-aabb-4e2c-ab8c-89b80ac2f69f%2Fbass.jpg?v=1597732611885"
+        onclick="playBass()"
+      />
+      <img
+        class="pic"
+        id="drums"
+        src="https://cdn.glitch.com/32304e11-aabb-4e2c-ab8c-89b80ac2f69f%2Fdrums.jpg?v=1597732608250"
+        onclick="playDrums()"
+      />
+            <input
+        type="range"
+        min="25"
+        max="75"
+        value="50"
+        class="slider"
+        id="myRange"
+      />
+            <div class="speeds">
+        <div class="speed">
+          slow
+        </div>
+        <div class="speed">
+          normal
+        </div>
+        <div class="speed">
+          fast
+        </div>
+      </div>
+    </div>
+
+    <div id="instructions" onclick="hitIt()">
+      <h3>
+        click here to play with the stems
+      </h3>
+    </div>
+
+<!--     <a
+      href="https://distrokid.com/hyperfollow/scoobertdoobert/moving-to-canada"
+      target="_blank"
+    > -->
+      <img
+        id="cover"
+        src="https://cdn.glitch.com/fa770d9b-0f41-4e55-aa29-f5fc8e509e3e%2FIMG_3110.jpeg?v=1599512595517"
+      />
+<!--     </a> -->
+
+    <div class="description-english">
+      <p>
+My name is Scoobert Doobert. (My real name is a secret.) I’m from San Diego, and I thought this Japanese song was pretty dope, so I covered it. It’s originally by a band called Nico Touches the Walls and the name of the song is Hologram. Hope you dig it. 
+      </p>
+    </div>
+
+    <div class="description-japanese">
+      <p>
+スクーバトドゥーバトと言います。僕の本当の名前は秘密です。サンディエゴで生まれ育ちました。この日本語の歌は面白いと思ういます。だからカバーをしました。NICO TOUCHES THE WALLSはこの歌を書いました。ホログラムと言います。よろしくお願いします。
+      </p>
+    </div>
+
+
+
+    <div id="press">
+    <h3>
+      Press
+    </h3>
+      <p>
+        "Incredible twisting bassline, smothering synth chords and this sort of weird, 
+        whistled riff that sits just north of incredible... something that’ll 
+        have you reaching for repeat."<br /><a
+          href="https://www.backseatmafia.com/premiere-scoobert-doobert-releases-new-video-for-moving-to-canada/?fbclid=IwAR05PoYwNH11qEHF5TVp8ts7HYqkfChxV7koxT3UKk8Ut-rhhssmvl8YU-c"
+          target="_blank"
+          >backseat mafia</a
+        >
+        <br /><br />
+        “An indie pop treasure unleashing tons of boyishness, nostalgia,
+        playfulness... and catchiness!”<br />
+        <a
+          href="http://lastdaydeaf.com/exclusive-track-premiere-scoobert-doobert-mystery-machine/"
+          target="_blank"
+          >last day leaf</a
+        ><br /><br />
+        “Unique guitar-driven song with an incredibly catchy melody... There’s
+        so much to love about it.”<br /><a
+          href="https://neonmusic.co.uk/face-your-fears-with-scoobert-dooberts-shaggys-anthem"
+          target="_blank"
+          >neon music</a
+        >
+        <br /><br />
+        “Sprink ling spookiness into the midst of this half - stoned reverie,
+        the holding - back - laughter giggliness of it, the rising tension
+        sauntering sleepily downstairs, a journey to the fridge in the middle of
+        the night.” <br /><a
+          href="http://www.yesnomusic.co.uk/2017/07/scoobert-doobert-my-scoobert-snack.html"
+          target="_blank"
+          >yes/no music</a
+        ><br />
+      </p>
+    </div>
+
+    <div id="beformer">
+      <p>
+        <a href="https://beformer.co" target="_blank">BEFORMER</a>
+      </p>
+    </div>
+  </body>
+</html>
