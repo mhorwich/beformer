@@ -1,15 +1,15 @@
-// var canada = document.getElementById("modalCanada");
+var canada = document.getElementById("modalCanada");
 
-// var span = document.getElementsByClassName("close")[0];
-// span.onclick = function() {
-//   canada.style.display = "none";
-// };
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() {
+  canada.style.display = "none";
+};
 
-// document.addEventListener("keydown", function(event) {
-//   if (event.key === "x"|| event.key === "Escape") {
-//     document.getElementById("modalCanada").style.display = "none";
-//   }
-// });
+document.addEventListener("keydown", function(event) {
+  if (event.key === "x"|| event.key === "Escape") {
+    document.getElementById("modalCanada").style.display = "none";
+  }
+});
 
 
 //Ripple Event Handler
